@@ -1,0 +1,30 @@
+create database BooksDBs;
+use BooksDBs;
+create table Book(
+s_no int primary key,
+ Booktitle varchar(50),
+ Author varchar(50),
+ genre varchar(50),
+ publication_year int,
+ price int);
+ 
+ drop table Book;
+ INSERT INto  Book VALUES(1,"Price and prejudice","Jane Austen","Classic",1813,550);
+ INSERT INto  Book VALUES(2,"To kill a Mockingbird","Harper Lee","Fiction",1960,600);
+ INSERT INto  Book VALUES(3,"The Life of Pi","Dystopian","Classic",1949,700);
+ INSERT INto  Book VALUES(4,"The Great Gatsby","F.Scott Fitzgerald","Classic",1925,850);
+ 
+ 
+ 
+
+select * from Book;
+SELECT * FROM Book
+WHERE Booktitle = 'To kill a Mockingbird'; 
+UPDATE Book
+SET price = "1000"
+WHERE price=550;
+
+DELETE from Book
+WHERE Booktitle = "Price and Prejudice";
+
+select avg(price) from Book;
